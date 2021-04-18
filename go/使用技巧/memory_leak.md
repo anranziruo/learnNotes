@@ -9,13 +9,13 @@
 ```
 场景一:
 for{
-		select {
-		   case <-time.After(time.Second*10):
-		   	   fmt.Println("sleep")
-		default:
-			fmt.Println("6666666")
-		}
-	}
+    select {
+        case <-time.After(time.Second*10):
+            fmt.Println("sleep")
+    default:
+        fmt.Println("6666666")
+    }
+}
 原因是:如果定时器没有达到预计的时间，gc就不会启动内存回收
 解决方案:
 tim:=time.NewTicker(time.Second*10)
