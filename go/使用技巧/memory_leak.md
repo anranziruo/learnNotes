@@ -47,4 +47,4 @@ for i := 0; i < 6; i++ {
 fmt.Println(runtime.NumGoroutine())
 此时输出的数量是3，分别是一个读协程，一个是写协程，和一个主协程
 ```
-[http请求不关闭body,内存泄漏](https://studygolang.com/articles/31717)
+[参考文档(https://studygolang.com/articles/31717)
