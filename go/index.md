@@ -49,4 +49,6 @@
 * [reflect](https://github.com/zhangchao1/learnNotes/blob/master/go/基础库/reflect/index.md)
 
 ## 注意事项
-* [编程注意事项](https://github.com/zhangchao1/learnNotes/blob/master/go/golang编程注意事项/注意事项.md)
+* [字符串使用](https://github.com/zhangchao1/learnNotes/blob/master/go/使用技巧/strings.md)
+* [math包](https://github.com/zhangchao1/learnNotes/blob/master/go/使用技巧/math.md)
+* [内存泄漏](https://github.com/zhangchao1/learnNotes/blob/master/go/使用技巧/memory_leak.md)
