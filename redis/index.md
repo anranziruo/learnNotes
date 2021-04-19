@@ -11,6 +11,7 @@
 * [复制](https://github.com/zhangchao1/learnNotes/blob/master/redis/基础/copy.md)
 * [淘汰机制](https://github.com/zhangchao1/learnNotes/blob/master/redis/基础/eliminated.md)
 * [哨兵](https://github.com/zhangchao1/learnNotes/blob/master/redis/基础/sentinel.md)
+* [集群](https://github.com/zhangchao1/learnNotes/blob/master/redis/基础/cluster.md)
 #### 进阶
 * [缓存穿透,雪崩,击穿](https://github.com/zhangchao1/learnNotes/blob/master/redis/进阶/cache.md)
 * [redis的分布式锁](https://github.com/zhangchao1/learnNotes/blob/master/redis/进阶/lock.md)
