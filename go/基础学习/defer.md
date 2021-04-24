@@ -72,6 +72,8 @@ type _defer struct {
 }
 runtime._defer结构体是延迟调用链表上的一个元素，所有的结构体都会通过link字段串联成链表。
 新声明的defer总是添加到链表头部,函数返回前执行defer则是从链表首部依次取出执行
+一个goroutine可能连续调用多个函数，defer添加过程跟上述流程一致，进入函数时添加defer,离开函数时取出defer，
+所以即便调用多个函数，也总是能保证defer是按FIFO方式执行的
 ```
 执行原理如下图:
 ![结构图](https://github.com/zhangchao1/learnNotes/blob/master/assets/go/defer_stru.png)
