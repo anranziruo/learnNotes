@@ -73,5 +73,7 @@ type _defer struct {
 runtime._defer结构体是延迟调用链表上的一个元素，所有的结构体都会通过link字段串联成链表。
 新声明的defer总是添加到链表头部,函数返回前执行defer则是从链表首部依次取出执行
 ```
+执行原理如下图:
+![结构图](https://github.com/zhangchao1/learnNotes/blob/master/assets/go/defer_stru.png)
 
 
