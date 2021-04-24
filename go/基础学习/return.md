@@ -4,7 +4,7 @@ defer、return、返回值三者的执行逻辑应该是：return最先执行，
 return 并非原子操作,分为赋值,和返回值两步操作
 ```
 结构图如下:
-![执行步骤](https://github.com/zhangchao1/learnNotes/blob/master/assets/go/defer_stru.png)
+![执行步骤](https://github.com/zhangchao1/learnNotes/blob/master/assets/go/return_stru.png)
 
 #### 示例1
 ```
