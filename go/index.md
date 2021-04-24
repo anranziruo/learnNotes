@@ -5,6 +5,7 @@
 * [break和continue](https://github.com/zhangchao1/learnNotes/blob/master/go/基础学习/loop.md)
 * [标签](https://github.com/zhangchao1/learnNotes/blob/master/go/基础学习/label.md)
 * [defer](https://github.com/zhangchao1/learnNotes/blob/master/go/基础学习/defer.md)
+* [return](https://github.com/zhangchao1/learnNotes/blob/master/go/基础学习/return.md)
 * [函数](https://github.com/zhangchao1/learnNotes/blob/master/go/基础学习/function.md)
 * [接口](https://github.com/zhangchao1/learnNotes/blob/master/go/基础学习/interface.md)
 * [new和make的区别](https://github.com/zhangchao1/learnNotes/blob/master/go/基础学习/new_make.md)
