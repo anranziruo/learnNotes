@@ -56,6 +56,23 @@ $ go run main.go
 ```
 此示例说明的就是:
 函数的参数会被预先计算；调用runtime.deferproc函数创建新的延迟调用时就会立刻拷贝函数的参数，函数的参数不会等到真正执行时计算
+#### 示例3
+```
+package main
+
+import "fmt"
+
+func main() {
+	var x int = 0
+	fmt.Printf("参数x：%p\n", &x)
+	defer func(x int) {
+		fmt.Printf("参数x：%p\n", &x)
+		x++
+	}(x)
+	fmt.Println(x)
+}
+//defer内的x和x外边的x不是一个变量，作用域是不一样的
+```
 
 #### defer的实现原理
 ```

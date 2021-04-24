@@ -80,73 +80,7 @@ func main() {
 	fmt.Println(in(8),de(4)) //in,de其实都在类似同一个闭包内.所以base的值都会叠加
 }
 ```
-##### defer语句
-defer语句会将其后面跟随的语句进行延迟处理。在defer归属的函数即将返回时，将延迟处理的语句按defer定义的逆序进行执行，也就是说，先被defer的语句最后被执行，最后被defer的语句，最先被执行
-```
-return x => 返回值=x
-            defer 语句
-            RET 语句
-func f1() int {
-	x := 5
-	defer func() {
-		x++
-	}()
-	return x
-} // 这个时候输出是5,先执行return x,但是在执行defer的时候,已经return
 
-func f2() (x int) {
-	defer func() {
-		x++
-	}()
-	return 5
-}// 这个时候输出是6,return的结果是5，对于defer来说,x相当于f2的内部变量，所以这个时候结果是6
 
-func f3() (y int) {
-	x := 5
-	defer func() {
-		x++
-	}()
-	return x
-}// 输出是5 return x的结果就确认了
-func f4() (x int) {
-	defer func(x int) {
-		x++
-	}(x)
-	return 5
-}//输出的结果是5,defer里面的x作用域只在defer里面
-func main() {
-	fmt.Println(f1())
-	fmt.Println(f2())
-	fmt.Println(f3())
-	fmt.Println(f4())
-}
-```
-##### panic和recover
-panic可以在任何地方引发，但recover只有在defer调用的函数中有效。
-```
-func funcDemo1() {
-	fmt.Println("func demo1")
-}
-
-func funcDemo2() {
-	defer func() {
-		err := recover()
-		//如果程序出出现了panic错误,可以通过recover恢复过来
-		if err != nil {
-			fmt.Println("recover in demo2")
-		}
-	}() 
-	panic("panic in B")
-}//没有defer的话,无法捕获异常
-
-func funcDemo3() {
-	fmt.Println("func demo3")
-}
-func main() {
-	funcA()
-	funcB()
-	funcC()
-}
-``
 
 
