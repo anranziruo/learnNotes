@@ -57,4 +57,21 @@ $ go run main.go
 此示例说明的就是:
 函数的参数会被预先计算；调用runtime.deferproc函数创建新的延迟调用时就会立刻拷贝函数的参数，函数的参数不会等到真正执行时计算
 
+#### defer的实现原理
+```
+defer的数据结构:
+type _defer struct {
+	siz       int32
+	started   bool
+	openDefer bool
+	sp        uintptr
+	pc        uintptr
+	fn        *funcval
+	_panic    *_panic
+	link      *_defer
+}
+runtime._defer结构体是延迟调用链表上的一个元素，所有的结构体都会通过link字段串联成链表。
+新声明的defer总是添加到链表头部,函数返回前执行defer则是从链表首部依次取出执行
+```
+
 
