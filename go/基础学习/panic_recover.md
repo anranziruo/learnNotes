@@ -55,3 +55,10 @@ func main() {
 //先执行defer,然后在执行panic once,接下来执行panic once,然后执行panic again and again,
 可以确定程序多次调用 panic 也不会影响 defer 函数的正常执行，所以使用 defer 进行收尾工作一般来说都是安全的
 ```
+#### panic的执行原理
+编译器会将关键字panic转换成runtime.gopanic，该函数的执行过程包含以下几个步骤
+```
+1.创建新的 runtime._panic 并添加到所在 Goroutine 的 _panic 链表的最前面；
+2.在循环中不断从当前 Goroutine 的 _defer 中链表获取 runtime._defer 并调用 runtime.reflectcall 运行延迟调用函数；
+3.调用 runtime.fatalpanic中止整个程序
+```
