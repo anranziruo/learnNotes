@@ -24,3 +24,34 @@ panic:
 ```
 panic和defer原理如下图:
 ![结构图](https://github.com/zhangchao1/learnNotes/blob/master/assets/go/panic_defer.png)
+
+#### 示例2
+```
+func main() {
+	defer fmt.Println("in main")
+	if err := recover(); err != nil {
+		fmt.Println(err)
+	}
+	panic("unknown err")
+}
+//示例2是无法recover到因为recover在panic之前，最好的方案将recover放到defer之中
+```
+#### 示例3
+```
+package main
+
+import "fmt"
+
+func main() {
+	defer fmt.Println("in main")
+	defer func() {
+		defer func() {
+			panic("panic again and again")
+		}()
+		panic("panic again")
+	}()
+	panic("panic once")
+}
+//先执行defer,然后在执行panic once,接下来执行panic once,然后执行panic again and again,
+可以确定程序多次调用 panic 也不会影响 defer 函数的正常执行，所以使用 defer 进行收尾工作一般来说都是安全的
+```
