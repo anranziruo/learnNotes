@@ -62,3 +62,16 @@ func main() {
 2.在循环中不断从当前 Goroutine 的 _defer 中链表获取 runtime._defer 并调用 runtime.reflectcall 运行延迟调用函数；
 3.调用 runtime.fatalpanic中止整个程序
 ```
+### recover
+```
+如果调用延迟执行函数时遇到了runtime.gorecover就会将_panic.recovered 标记成 true 并返回 panic 的参数；
+在这次调用结束之后，runtime.gopanic 会从 runtime._defer 结构体中取出程序计数器 pc 和栈指针 sp 并调用 runtime.recovery 函数进行恢复程序；
+runtime.recovery 会根据传入的 pc 和 sp 跳转回 runtime.deferproc；
+编译器自动生成的代码会发现 runtime.deferproc 的返回值不为0，这时会跳回runtime.deferreturn并恢复到正常的执行流程
+```
+#### 总结
+```
+panic只会触发当前Goroutine的defer；
+recover只有在defer中调用才会生效；
+panic允许在defer中嵌套多次调用
+```
