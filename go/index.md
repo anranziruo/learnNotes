@@ -23,6 +23,7 @@
 * [方法](https://github.com/zhangchao1/learnNotes/blob/master/go/基础学习/methods.md)
 * [常用时间格式](https://github.com/zhangchao1/learnNotes/blob/master/go/基础学习/时间.md)
 * [反射](https://github.com/zhangchao1/learnNotes/blob/master/go/基础学习/reflect.md)
+* [sync.map原理](https://github.com/zhangchao1/learnNotes/blob/master/go/基础学习/sync_map.md)
 ## 包管理
 * [init函数](https://github.com/zhangchao1/learnNotes/blob/master/go/包管理/init.md)
 * [包管理](https://github.com/zhangchao1/learnNotes/blob/master/go/包管理/import.md)
