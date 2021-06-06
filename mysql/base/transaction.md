@@ -1,4 +1,6 @@
 ### 事务
+set tx_isolation='隔离级别';//设置session事务隔离级别的
+SET @@gloabl.tx_isolation = 'READ-UNCOMMITTED';//设置全局的事务隔离级别
 ```
 事务应该具有4个属性：原子性、一致性、隔离性、持久性。这四个属性通常称为ACID特性
 事务的隔离级别:
@@ -60,7 +62,6 @@ commit;
 session1:
 select age from t_user where age between 20 and 30;//结果依然是27和28,mysql加入了间隙锁，所以不会这种情况
 ```
-
 #### 比较
 ```
 隔离级别比较：可串行化>可重复读>读已提交>读未提交
