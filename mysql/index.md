@@ -8,6 +8,7 @@
 * [DDL,DML](https://github.com/zhangchao1/learnNotes/blob/master/mysql/base/structure.md)
 * [索引](https://github.com/zhangchao1/learnNotes/blob/master/mysql/base/index.md)
 * [锁](https://github.com/zhangchao1/learnNotes/blob/master/mysql/base/lock.md)
+* [事务](https://github.com/zhangchao1/learnNotes/blob/master/mysql/base/transaction.md)
 * [常用函数使用](https://github.com/zhangchao1/learnNotes/blob/master/mysql/base/常用函数使用.md)
 #### 进阶
 * [存储](https://github.com/zhangchao1/learnNotes/blob/master/mysql/step1/storage.md)
