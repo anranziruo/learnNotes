@@ -7,7 +7,7 @@ SET @@gloabl.tx_isolation = 'READ-UNCOMMITTED';//设置全局的事务隔离级�
 未提交读（READ UNCOMMITED）（可能发生脏读、不可重复读和幻读问题）
 已提交读 （READ COMMITED）(可能发生不可重复读和幻读)
 可重复读（REPEATABLE READ）(innodb默认采用的是可重复读的级别)(可能发生幻读问题)
-可串行化（SERIALIZABLE）
+可串行化（SERIALIZABLE）脏读、不可重复读、幻读都不会发生，因为加了锁
 ```
 ####
 #### 脏读
@@ -67,3 +67,5 @@ select age from t_user where age between 20 and 30;//结果依然是27和28,mysq
 隔离级别比较：可串行化>可重复读>读已提交>读未提交
 隔离级别对性能的影响比较：可串行化>可重复读>读已提交>读未提交
 ```
+
+#### 隔离级别的实现原理
