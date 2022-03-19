@@ -15,3 +15,4 @@
 * [斐波那契](https://github.com/zhangchao1/learnNotes/blob/master/algorithm/fibonacci.md)
 * [单链表](https://github.com/zhangchao1/learnNotes/blob/master/algorithm/reverse_link.md)
 * [二维数组搜索](https://github.com/zhangchao1/learnNotes/blob/master/algorithm/muliti_slice.md)
+* [回文数字](https://github.com/zhangchao1/learnNotes/blob/master/algorithm/hui_int.md)
