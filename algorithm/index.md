@@ -10,9 +10,10 @@
 * [二分查找](https://github.com/zhangchao1/learnNotes/blob/master/algorithm/binary_search.md)
 
 #### 力扣
+* [两数之和](https://github.com/zhangchao1/learnNotes/blob/master/algorithm/two_numers.md)
+* [回文数字](https://github.com/zhangchao1/learnNotes/blob/master/algorithm/hui_int.md)
 * [最长回文字符串](https://github.com/zhangchao1/learnNotes/blob/master/algorithm/hui_str.md)
 * [无重复字符的最长子串](https://github.com/zhangchao1/learnNotes/blob/master/algorithm/max_str.md)
 * [斐波那契](https://github.com/zhangchao1/learnNotes/blob/master/algorithm/fibonacci.md)
 * [单链表](https://github.com/zhangchao1/learnNotes/blob/master/algorithm/reverse_link.md)
 * [二维数组搜索](https://github.com/zhangchao1/learnNotes/blob/master/algorithm/muliti_slice.md)
-* [回文数字](https://github.com/zhangchao1/learnNotes/blob/master/algorithm/hui_int.md)
