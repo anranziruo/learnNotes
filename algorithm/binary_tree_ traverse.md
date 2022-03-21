@@ -18,16 +18,36 @@ func levelOrder(root *TreeNode) [][]int {
 		for j := 0; j < len(q); j++ {
 			node := q[j]
 			ret[i] = append(ret[i], node.Val)
-			if node.Right != nil {
-				p = append(p, node.Right)
-			}
 			if node.Left != nil {
 				p = append(p, node.Left)
+			}
+			if node.Right != nil {
+				p = append(p, node.Right)
 			}
 		}
 		q = p
 	}
 	return ret
+}
+```
+解法2：基于dfs的递归算法
+```
+func levelOrder(root *TreeNode) [][]int {
+    var ret [][]int
+    var dfOrder func(r *TreeNode, level int)
+	dfOrder = func(r *TreeNode, level int) {
+        if r == nil{
+            return 
+        }
+        if level == len(ret){
+            ret = append(ret, []int{})
+        }
+		ret[level] = append(ret[level], r.Val)
+		dfOrder(r.Left, level+1)
+		dfOrder(r.Right, level+1)
+	}
+	dfOrder(root, 0)
+    return ret
 }
 ```
 
