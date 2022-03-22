@@ -78,3 +78,16 @@ func frontendOrder(root *TreeNode) (res []int) {
 	return res
 }
 ```
+#### 二叉树的根深度的计算
+```
+func maxDepth(root *TreeNode) int {
+     if root == nil{return 0}
+     leftInt:=maxDepth(root.Left)+1
+     RightInt:=maxDepth(root.Right)+1
+     resInt:=leftInt
+     if RightInt>leftInt{
+         resInt = RightInt
+     }
+     return resInt
+}
+```
