@@ -4,44 +4,28 @@
 ```
 "回文串”是一个正读和反读都一样的字符串
 ```
-
+暴力破解法
 ```
-package main
-
-import (
-	"fmt"
-	"strings"
-)
-
-func main() {
-	fmt.Println(MaxStringLen("babad"))
+func longestPalindrome(str string) string {
+    maxLen:=0
+    maxStr:=""
+    for i:=0;i<len(str);i++{
+        for j:=i;j<len(str);j++{
+            huiStr,isHui:=checkH(str[i:j+1])
+            if isHui && len(huiStr)>maxLen{
+                maxLen = len(huiStr)
+                maxStr = huiStr
+            }
+        }
+    }
+    return maxStr
 }
 
-func MaxStringLen(s string) (string, int) {
-	s = strings.Trim(s, " ")
-	strLen := len(s)
-	if strLen == 0 {
-		return "", 0
-	}
-	var infoMaps = make(map[string]int)
-	for i := 0; i < strLen; i++ {
-		for j := i + 1; j <= strLen; j++ {
-			tempStr := s[i:j]
-			infoMaps[tempStr] = len(tempStr)
-		}
-	}
-	tempLen := 0
-	tempV := ""
-	for key, val := range infoMaps {
-		res := ""
-		for i := len(key) - 1; i >= 0; i-- {
-			res = fmt.Sprintf("%s%s", res, string(key[i]))
-		}
-		if val > tempLen && key == res {
-			tempLen = val
-			tempV = key
-		}
-	}
-	return tempV, tempLen
+func checkH(subStr string) (string,bool){
+    newStr:=""
+    for i:=0;i<len(subStr);i++{
+        newStr=string(subStr[i])+newStr
+    }
+    return subStr,newStr==subStr
 }
 ```
