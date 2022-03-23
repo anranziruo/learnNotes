@@ -4,7 +4,7 @@
 ```
 "回文串”是一个正读和反读都一样的字符串
 ```
-暴力破解法
+暴力破解法，时间复杂度是o(n^3)
 ```
 func longestPalindrome(str string) string {
     maxLen:=0
