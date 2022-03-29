@@ -5,6 +5,8 @@
 窗口滑动算法:
 滑动窗口算法是在给定特定窗口大小的数组或字符串上执行要求的操作,该技术可以将一部分问题中的嵌套循环转变为一个单循环，因此它可以减少时间复杂度。
 ```
+适用的示例:
+https://leetcode-cn.com/problems/longest-substring-without-repeating-characters/solution/hua-dong-chuang-kou-by-powcai/
 #### 示例 长度最小的子数组
 ```
 给定一个含有 n 个正整数的数组和一个正整数 target 。
