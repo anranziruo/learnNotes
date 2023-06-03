@@ -22,6 +22,7 @@
 3.开启网卡
 vi /etc/sysconfig/network-scripts/ifcfg-ens33
 ONBOOT设置为yes
+service network restart
 4.yum install wget vim net-tools.x86_64
 ```
 #### 设置yum的源为阿里的源
