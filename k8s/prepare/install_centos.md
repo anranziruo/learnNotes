@@ -19,7 +19,10 @@
 ```
 1.添加设备->增加网络设备
 2.设置虚拟机内存为2G,选择2个处理器内核
-3.yum install wget vim net-tools.x86_64
+3.开启网卡
+vi /etc/sysconfig/network-scripts/ifcfg-ens33
+ONBOOT设置为yes
+4.yum install wget vim net-tools.x86_64
 ```
 #### 设置yum的源为阿里的源
 ```
