@@ -10,7 +10,8 @@ cd /Library/Preferences/VMware\ Fusion/vmnet8
 #### 获取ip范围
 cd /Library/Preferences/VMware\ Fusion/vmnet8
 ```
-1.cat dhcpc.conf
+1.cat dhcpd.conf
+range 172.16.6.128 172.16.6.254;
 2.range ip的范围 //获取可配置的ip
 ```
 
