@@ -28,6 +28,9 @@ source ~/.bash_profile
 ```
 #### 配置flannel
 ```
+mkdir -p $HOME/.kube
+sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
+sudo chown $(id -u):$(id -g) $HOME/.kube/config
 1.https://github.com/coreos/flannel/releases/download/v0.13.0/flanneld-v0.13.0-amd64.docker 下载docker镜像
 2.docker load < flanneld-v0.13.0-amd64.docker 导入镜像
 3.wget https://raw.githubusercontent.com/coreos/flannel/master/Documentation/kube-flannel.yml
