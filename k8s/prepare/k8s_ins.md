@@ -7,8 +7,16 @@ kubeadm config print init-defaults > kubeadm-config.yaml
 
 #### 修改配置
 advertiseAddress: 172.16.6.132//本机ip
-podSubnet: 10.244.0.0/16 //不加这个可能会使得Node间Cluster IP不通。
 
+//这个添加示例如下:
+imageRepository: k8s.gcr.io
+kind: ClusterConfiguration
+kubernetesVersion: v1.16.0
+networking:
+  podSubnet: "10.244.0.0/16"
+  dnsDomain: cluster.local
+  serviceSubnet: 10.96.0.0/12
+  //podSubnet: 10.244.0.0/16 //不加这个可能会使得Node间Cluster IP不通。
 #### 增加配置
 ---
 apiVersion: kubeproxy.config.k8s.io/v1alpha1
@@ -27,6 +35,10 @@ echo "export KUBECONFIG=/etc/kubernetes/admin.conf" >> ~/.bash_profile
 source ~/.bash_profile
 ```
 #### 配置flannel
+另外,遇到网络问题可以:
+1.https://github.com/containernetworking/plugins/releases/tag/v0.8.6
+2.tar zxvf cni-plugins-linux-amd64-v0.8.6.tgz
+3.cp flannel /opt/cni/bin/
 ```
 mkdir -p $HOME/.kube
 sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
