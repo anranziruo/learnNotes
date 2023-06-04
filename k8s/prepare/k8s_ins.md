@@ -36,9 +36,11 @@ source ~/.bash_profile
 ```
 #### 配置flannel
 另外,遇到网络问题可以:
+```
 1.https://github.com/containernetworking/plugins/releases/tag/v0.8.6
 2.tar zxvf cni-plugins-linux-amd64-v0.8.6.tgz
 3.cp flannel /opt/cni/bin/
+```
 ```
 mkdir -p $HOME/.kube
 sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
