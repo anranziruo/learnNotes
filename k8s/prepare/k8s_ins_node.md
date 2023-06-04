@@ -20,4 +20,6 @@ kubeadm join 172.16.6.132:6443 --token unb1m9.q3mj0bxw5f5jgd56     --discovery-t
 4.编辑这个文件/etc/sysconfig/kubelet
 修改如下:
 KUBELET_EXTRA_ARGS=--cgroup-driver=systemd
+systemctl daemon-reload
+systemctl restart kubelet
 ```
