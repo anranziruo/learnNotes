@@ -23,6 +23,7 @@ yum update -y
 yum list docker-ce --showduplicates | sort -r  //查看docker的版本
 
 yum install docker-ce-3:18.09.9-3.el7.x86_64 
+//可以安装最新的
 
 systemctl enable docker
 systemctl start docker
