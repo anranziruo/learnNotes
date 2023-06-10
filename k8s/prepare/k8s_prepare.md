@@ -7,6 +7,7 @@ rpm -Uvh http://www.elrepo.org/elrepo-release-7.0-3.el7.elrepo.noarch.rpm
 yum --enablerepo=elrepo-kernel install -y kernel-lt
 //设置新内核启动###
 grub2-set-default 'CentOS Linux (5.4.91-1.el7.elrepo.x86_64) 7 (Core)'
+grub2-set-default 'CentOS Linux (5.4.246-1.el7.elrepo.x86_64) 7 (Core)'
 ```
 
 #### 安装相关依赖
