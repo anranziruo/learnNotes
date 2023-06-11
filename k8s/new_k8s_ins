@@ -1,0 +1,11 @@
+新的安装指南
+
+docker的下载地址
+
+docker pull registry.cn-hangzhou.aliyuncs.com/google_containers/kube-proxy:v1.27.2
+docker pull registry.cn-hangzhou.aliyuncs.com/google_containers/kube-apiserver:v1.27.2
+docker pull registry.cn-hangzhou.aliyuncs.com/google_containers/kube-controller-manager:v1.27.2
+docker pull registry.cn-hangzhou.aliyuncs.com/google_containers/kube-scheduler:v1.27.2
+docker pull registry.cn-hangzhou.aliyuncs.com/google_containers/coredns:1.10.0
+docker pull registry.cn-hangzhou.aliyuncs.com/google_containers/etcd:3.5.6-0
+docker pull registry.cn-hangzhou.aliyuncs.com/google_containers/pause:3.9
