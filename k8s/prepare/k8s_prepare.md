@@ -71,6 +71,7 @@ sysctl --system
 ```
 yum -y install ipvsadm
 modprobe br_netfilter
+echo 1 > /proc/sys/net/ipv4/ip_forward
 
 cat > /etc/sysconfig/modules/ipvs.modules <<EOF
 #!/bin/bash
