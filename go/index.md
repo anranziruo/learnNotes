@@ -57,3 +57,6 @@
 * [字符串使用](https://github.com/zhangchao1/learnNotes/blob/master/go/使用技巧/strings.md)
 * [math包](https://github.com/zhangchao1/learnNotes/blob/master/go/使用技巧/math.md)
 * [内存泄漏](https://github.com/zhangchao1/learnNotes/blob/master/go/使用技巧/memory_leak.md)
+
+## 编程范式
+* [Functional Options](https://github.com/zhangchao1/learnNotes/blob/master/go/编程范式/func_opt.md)
