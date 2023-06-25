@@ -61,3 +61,4 @@
 ## 编程范式
 * [Functional Options](https://github.com/zhangchao1/learnNotes/blob/master/go/编程范式/func_opt.md)
 * [反转控制](https://github.com/zhangchao1/learnNotes/blob/master/go/编程范式/ioc.md)
+* [map-reduce](https://github.com/zhangchao1/learnNotes/blob/master/go/编程范式/map_reduce.md)
