@@ -65,3 +65,6 @@
 
 ## vcs
 * [git](https://github.com/zhangchao1/learnNotes/blob/master/git/index.md)
+
+## 游戏开发
+* [cocos](https://github.com/zhangchao1/learnNotes/blob/master/cocos/index.md)
