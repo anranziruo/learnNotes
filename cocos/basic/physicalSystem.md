@@ -25,3 +25,19 @@ onBeginContact(contact,self,other){
     let normal = contact.getWorldManifold().points
 }
 ```
+### senSor属性
+```
+会产生碰撞回调，但是不会产生碰撞效果
+
+onBeginContact(contact,self,other){
+    let points = contact.getWorldManifold().points
+    console.log(points)
+    let normal = contact.getWorldManifold().normal
+    console.log(normal)
+}
+onEndContact(contact,self,other){
+    console.log("结束碰撞回调")
+}
+```
+会输出结束碰撞回调
+适用场景:隐藏宝箱，隐藏副本
