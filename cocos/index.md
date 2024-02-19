@@ -7,5 +7,6 @@
 * [射线](https://github.com/zhangchao1/learnNotes/blob/master/cocos/basic/rays.md)
 * [动作系统](https://github.com/zhangchao1/learnNotes/blob/master/cocos/basic/action.md)
 * [容器](https://github.com/zhangchao1/learnNotes/blob/master/cocos/basic/container.md)
+* [数据存储](https://github.com/zhangchao1/learnNotes/blob/master/cocos/basic/dataStorage.md)
 
 
