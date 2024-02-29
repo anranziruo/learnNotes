@@ -4,6 +4,7 @@
 * [python](https://github.com/zhangchao1/learnNotes/blob/master/python/index.md)
 * [php](https://github.com/zhangchao1/learnNotes/blob/master/php/index.md)
 * [go](https://github.com/zhangchao1/learnNotes/blob/master/go/index.md)
+* [typescript](https://github.com/zhangchao1/learnNotes/blob/master/typescript/index.md)
 
 ## 数据库
 * [mysql](https://github.com/zhangchao1/learnNotes/blob/master/mysql/index.md)
