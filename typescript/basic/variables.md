@@ -50,3 +50,68 @@ console.log(age)
 let input:any = 123+"b"
 console.log(input)
 ```
+
+### 不同类型变量声明
+
+#### number变量
+```
+let first:number = 123; // number 
+let second: number = 0x37CF;  // hexadecimal
+let third:number=0o377 ;      // octal
+let fourth: number = 0b111001;// binary  
+
+console.log(first);  // 123 
+console.log(second); // 14287
+console.log(third);  // 255
+console.log(fourth); // 57 
+```
+#### string
+let employeeName:string = 'John Smith'; 
+//OR
+let employeeName:string = "John Smith"
+
+#### boolean
+let isPresent:boolean = true;
+
+#### array
+let f1:string[] = ['Apple', 'Banana'];
+// let f2: string[] = ['Apple',123, 'Banana'];//非法声明
+let fAny: any[] = ['Apple',123, 'Banana'];
+console.log(f1,fAny)
+
+let a1: Array<string> = ['Apple', 'Orange', 'Banana'];
+// let f2: Array<string> = ['Apple',123, 'Banana'];//非法声明
+let aAny: Array<any> = ['Apple',123, 'Banana'];
+console.log(f1,fAny)
+
+#### tuples
+初始化变量要按照声明顺序
+let employee: [number, string] = [1, "Steve"];
+let person: [number, string, boolean] = [1, "Steve", true];
+let user: [number, string, boolean, number, string];// declare tuple variable
+user = [1, "Steve", true, 20, "Admin"];// initialize tuple variable
+
+#### union类型
+let code: (string | number);
+code = 123;   // OK
+code = "ABC"; // OK
+code = false; // Compiler Error
+
+#### void
+let nothing: void = undefined;
+let num: void = 1; // Error
+
+声明函数的返回值
+function sayHi(): void { 
+    console.log('Hi!')
+} 
+
+let speech: void = sayHi(); 
+console.log(speech);
+
+#### never
+never类型认为情况永远不会发生
+function throwError(errorMsg: string): never { 
+            throw new Error(errorMsg); 
+}
+
