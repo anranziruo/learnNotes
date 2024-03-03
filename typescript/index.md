@@ -8,3 +8,4 @@
 * [函数](https://github.com/zhangchao1/learnNotes/blob/master/typescript/basic/fn.md)
 * [interface](https://github.com/zhangchao1/learnNotes/blob/master/typescript/basic/interface.md)
 * [类](https://github.com/zhangchao1/learnNotes/blob/master/typescript/basic/class.md)
+* [泛型](https://github.com/zhangchao1/learnNotes/blob/master/typescript/basic/generics.md)
