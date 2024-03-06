@@ -9,3 +9,7 @@
 * [interface](https://github.com/zhangchao1/learnNotes/blob/master/typescript/basic/interface.md)
 * [类](https://github.com/zhangchao1/learnNotes/blob/master/typescript/basic/class.md)
 * [泛型](https://github.com/zhangchao1/learnNotes/blob/master/typescript/basic/generics.md)
+
+## 进阶教程
+* [单例模式](https://github.com/zhangchao1/learnNotes/blob/master/typescript/design_pattern/singleton.md)
+* [观察则模式](https://github.com/zhangchao1/learnNotes/blob/master/typescript/design_pattern/observer.md)
