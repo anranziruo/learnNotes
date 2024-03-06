@@ -13,3 +13,4 @@
 ## 进阶教程
 * [单例模式](https://github.com/zhangchao1/learnNotes/blob/master/typescript/design_pattern/singleton.md)
 * [观察则模式](https://github.com/zhangchao1/learnNotes/blob/master/typescript/design_pattern/observer.md)
+* [工厂模式](https://github.com/zhangchao1/learnNotes/blob/master/typescript/design_pattern/factory.md)
