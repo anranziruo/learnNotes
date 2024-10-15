@@ -67,3 +67,7 @@ enabled=0
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-7
 gpgcheck=1
 ```
+### yum安装注意事项
+```
+yum 安装加这个指令--nogpgcheck
+```
