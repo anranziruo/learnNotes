@@ -100,6 +100,7 @@ version: '3'
 services:
   docker-fe:
     image: "apache/doris:1.2.2-fe-arm"
+    platform: linux/arm64
     container_name: "doris-fe"
     hostname: "fe"
     environment:
@@ -114,9 +115,10 @@ services:
       - ./data/fe/log:/opt/apache-doris/fe/log
     networks:
       doris_net:
-        ipv4_address: 172.18.0.2	
+        ipv4_address: 172.18.0.2
   docker-be:
     image: "apache/doris:1.2.2-be-arm"
+    platform: linux/arm64
     container_name: "doris-be"
     hostname: "be"
     depends_on:
@@ -133,10 +135,11 @@ services:
       - ./data/be/log:/opt/apache-doris/be/log
     networks:
       doris_net:
-        ipv4_address: 172.18.0.3	
+        ipv4_address: 172.18.0.3
 networks:
   doris_net:
     ipam:
       config:
         - subnet: 172.18.0.0/16
+
 ```
