@@ -73,6 +73,22 @@ enabled=0
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-7
 gpgcheck=1
 ```
+### 替换密匙
+```
+curl -o /etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-7  https://mirrors.aliyun.com/centos/RPM-GPG-KEY-CentOS-7
+
+curl -o /etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-7 https://archive.fedoraproject.org/pub/epel/RPM-GPG-KEY-EPEL-7
+```
+
+### 生成缓存
+```
+yum makecache
+
+rpm --import /etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-7
+
+rpm --import /etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-7
+```
+
 ### yum安装注意事项
 ```
 yum 安装加这个指令--nogpgcheck
