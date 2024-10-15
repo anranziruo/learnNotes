@@ -1,3 +1,9 @@
+### 执行指令
+```
+cd /etc/yum.repos.d/
+mkdir yum-back
+mv CentOS-* yum-back/
+```
 ### docker指令
 docker run -it --platform linux/arm64/v8 --name doris-centos -p 8030:8030 -p 9030:9030 --privileged -d centos:7.9.2009
 ### 阿里云centos源
