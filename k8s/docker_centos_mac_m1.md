@@ -93,3 +93,50 @@ rpm --import /etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-7
 ```
 yum 安装加这个指令--nogpgcheck
 ```
+
+### doris-composer.YML
+```
+version: '3'
+services:
+  docker-fe:
+    image: "apache/doris:1.2.2-fe-arm"
+    container_name: "doris-fe"
+    hostname: "fe"
+    environment:
+      - FE_SERVERS=fe1:172.18.0.2:9001
+      - FE_ID=1
+    ports:
+      - 8030:8030
+      - 9030:9030
+    volumes:
+      - ./data/fe/doris-meta:/opt/apache-doris/fe/doris-meta
+      - ./data/fe/conf:/opt/apache-doris/fe/conf
+      - ./data/fe/log:/opt/apache-doris/fe/log
+    networks:
+      doris_net:
+        ipv4_address: 172.18.0.2	
+  docker-be:
+    image: "apache/doris:1.2.2-be-arm"
+    container_name: "doris-be"
+    hostname: "be"
+    depends_on:
+      - docker-fe
+    environment:
+      - FE_SERVERS=fe1:172.18.0.2:9001
+      - BE_ADDR=172.18.0.3:9050
+    ports:
+      - 8040:8040
+    volumes:
+      - ./data/be/storage:/opt/apache-doris/be/storage
+      - ./data/be/conf:/opt/apache-doris/be/conf
+      - ./data/be/script:/docker-entrypoint-initdb.d
+      - ./data/be/log:/opt/apache-doris/be/log
+    networks:
+      doris_net:
+        ipv4_address: 172.18.0.3	
+networks:
+  doris_net:
+    ipam:
+      config:
+        - subnet: 172.18.0.0/16
+```
